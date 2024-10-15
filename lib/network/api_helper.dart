@@ -80,6 +80,7 @@ class APIHelper {
   Future<void> addContact({required String fName,required String lName,required String email,required String mobile}) async {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     String str = json.encode({
+
       "first_name": "$fName",
       "last_name": "$lName",
       "email": "$email",
@@ -105,17 +106,12 @@ class APIHelper {
         Uri.parse("https://crmcomponentapi.blueflower.in/api/contact"),
         headers: {"Authorization": "Bearer ${prefs.getString("token").toString()}"},
         body: str);
-    if (response.statusCode == 200) {
+
       print("add res: ${response.statusCode}");
       print("add res: ${response.body}");
       print("add res: ${response.headers}");
      // Map decodedData = jsonDecode(response.body);
      print("ADD:::${response.body}");
-    } else {
-      print("Error: ${response.statusCode}");
-      print("Error: ${response.body}");
-      print("Error: ${response.headers}");
-      return null;
-    }
+
   }
 }

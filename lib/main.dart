@@ -1,12 +1,17 @@
+import 'package:blueflower/provider/record_update_controller.dart';
 import 'package:blueflower/views/screens/add_screen.dart';
 import 'package:blueflower/views/screens/details_screen.dart';
 import 'package:blueflower/views/screens/home_screen.dart';
 import 'package:blueflower/views/screens/login_screen.dart';
 import 'package:blueflower/views/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      MultiProvider(providers:[
+        ChangeNotifierProvider(create: (context) => RecordUpdateController(),)
+      ],child: MyApp(), ));
 }
 
 class MyApp extends StatelessWidget {

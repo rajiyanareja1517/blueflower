@@ -1,5 +1,5 @@
 import 'package:blueflower/model/user.dart';
-import 'package:blueflower/network_model/api_helper.dart';
+import 'package:blueflower/network/api_helper.dart';
 import 'package:flutter/material.dart';
 class DetailsScreen extends StatefulWidget {
   const DetailsScreen({super.key});

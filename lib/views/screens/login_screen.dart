@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../model/user.dart';
-import '../../network_model/api_helper.dart';
+import '../../network/api_helper.dart';
 import '../utils/custom_form_field.dart';
 
 class LoginScreen extends StatefulWidget {
